@@ -1,15 +1,29 @@
+/* 
+Reseting by default seting of margin and ppadding
+by using * marks
+*/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 
+Import Lato font from google font
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+/* this is body color and here we also set by default font-family "Lato" */
+
 body{
-    background-color: #0abde3;
+    background-color: #2ad6fc;
     font-family: 'Lato', sans-serif;
 }
+
+/* For adjusting our Box in center we are taking a parent div that name is
+ .main and using flex for making this is in center */
 
 .main{
    width: 100%;
@@ -20,12 +34,22 @@ body{
    align-items: center;
 }
 
+/* From Here start our main box 
+Here we are seting a background color for our box and
+ giving them a minner gray color shadow
+ and a border radius.
+ */
+
 #box{
     width: 40%;
     box-shadow: 0px 0px 5px grey;
     background-color: #feca57;
     padding: 15px;
+    border-radius:10px;
 }
+
+/* This is Our option div and we giving here our input radio button
+and options */
 
 .row{
     width: 100%;
@@ -33,12 +57,52 @@ body{
     margin-left: 0;
 }
 
+/* This is our Submit Button, we just give them 
+a background color and font color. we are aso giving some border radius
+ */
+
 .btn{
     width: 100%;
     padding: 6px;
-    background-color:#0abde3 ;
-    color: #fff;
+    background-color:#2ad6fc ;
+    color: #000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Making Design is for responsive. 
+Idea is making Same Design for Mobile and Tablets.
+So we set Max-width is 925px. */
+
+@media(max-width:925px){
+    #box{
+        width:95%;
+    }
+
+    #box h2{
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .row .option{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.5rem;
+    }
+    .row lebel{
+        font-size: 2rem;
+    }
+    .btn{
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 3rem;
+    }
+    #box div h3, #box div h2{
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    #box div h3{
+        margin-bottom: 2rem;
+    }
 }

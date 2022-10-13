@@ -36,7 +36,7 @@ const questions = [
 
     },
 ]
-
+// we are creating some global variables here 
 let index = 0;
 let total = questions.length;
 let right = 0;
@@ -65,11 +65,14 @@ const submitQuiz = () => {
     }else{
         wrong++;
     }
+    //index++ is for every time getting new questions
     index++;
     loadQuestion();
     return;
 }
 
+// From this function we are getting and validating our answer from Arrey
+//and return the value of the option which are choosen by the user  
 const getAnswer = () => {
     let answer;
     optionInputs.forEach(
@@ -81,6 +84,8 @@ const getAnswer = () => {
     )
     return answer;
 }
+//From this function we are resetting our options 
+//for every time user have to select or choose one of the given option
 
 const reset = () =>{
     optionInputs.forEach(
@@ -89,7 +94,8 @@ const reset = () =>{
         }
     )    
 }
-
+//For using this function we are just sure that when user complete the
+//quiz they got a message from us.
 const endQuiz = () => {
     document.getElementById("box").innerHTML = `
     <div style="text-align:center">
