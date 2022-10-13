@@ -41,6 +41,8 @@ let index = 0;
 let total = questions.length;
 let right = 0;
     wrong = 0;
+
+//getting our elements here by just selecting the
 const queBox = document.getElementById('queBox');
 const optionInputs = document.querySelectorAll('.option');
 const loadQuestion = () => {
